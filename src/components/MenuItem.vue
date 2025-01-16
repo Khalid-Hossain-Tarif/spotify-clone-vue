@@ -1,6 +1,7 @@
 <script setup>
 import { ref, toRefs, watchEffect } from "vue"
 import { useRoute } from "vue-router"
+
 const route = useRoute()
 
 const props = defineProps({

@@ -44,6 +44,7 @@
                       class="rounded-full" 
                       width="27"
                       src="https://yt3.ggpht.com/e9o-24_frmNSSVvjS47rT8qCHgsHNiedqgXbzmrmpsj6H1ketcufR1B9vLXTZRa30krRksPj=s88-c-k-c0x00ffffff-no-rj-mo"
+                      alt="user"
                     >
                     <div class="text-white text-[14px] ml-1.5 font-semibold">John Weeks Dev</div>
                     <ChevronDown v-if="!openMenu" @click="openMenu = true" fillColor="#FFFFFF" :size="25" />
@@ -51,20 +52,20 @@
                 </div>
             </button>
 
-            <span 
+            <div
                 v-if="openMenu"
                 class="fixed w-[190px] bg-[#282828] shadow-2xl z-50 rounded-sm top-[52px] right-[35px] p-1 cursor-pointer">
                 <ul class="text-gray-200 font-semibold text-[14px]">
                     <li class="px-3 py-2.5 hover:bg-[#3E3D3D] border-b border-b-gray-600">Profile</li>
                     <li class="px-3 py-2.5 hover:bg-[#3E3D3D]">Log out</li>
                 </ul>
-            </span>
+            </div>
         </div>
 
 
         <div id="SideNav" class="h-[100%] p-6 w-[240px] fixed z-50 bg-black">
             <RouterLink to="/">
-              <img width="125" src="/images/icons/spotify-logo.png">
+              <img width="125" src="/images/icons/spotify-logo.png" alt="spotify logo" />
             </RouterLink>
             <div class="my-8"></div>
             <ul>
@@ -77,7 +78,7 @@
                 <RouterLink to="/library">
                     <MenuItem class="ml-[2px]" :iconSize="23" name="Your Library" iconString="library" pageUrl="/library" />
                 </RouterLink>
-                <div class="py-3.5"></div>
+                <li class="py-3.5"></li>
                 <MenuItem :iconSize="24" name="Create Playlist" iconString="playlist" pageUrl="/playlist" />
                 <MenuItem class="-ml-[1px]" :iconSize="27" name="Liked Songs" iconString="liked" pageUrl="/liked" />
             </ul>
